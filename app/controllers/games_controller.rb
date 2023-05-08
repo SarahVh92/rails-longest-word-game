@@ -13,6 +13,7 @@ class GamesController < ApplicationController
     @letters = params[:letters].split
     @word = params[:word].upcase
     @english_word = english_word?(@word)
+
     @included = included?(@word, @letters)
   end
 
